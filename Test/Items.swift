@@ -10,10 +10,10 @@ import UIKit
 
 class Items: Equatable {
     var productName: String
-    var productPrice: NSNumber
+    var productPrice: String
     var productImage: UIImage
     
-    init(productName: String, productPrice: NSNumber, productImage: UIImage = UIImage()) {
+    init(productName: String, productPrice: String, productImage: UIImage) {
         self.productName = productName
         self.productPrice = productPrice
         self.productImage = productImage

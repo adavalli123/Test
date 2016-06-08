@@ -8,10 +8,15 @@
 
 import Foundation
 
-class Product {
+class Product: Equatable {
     var items: [Items]!
     
     init(items: [Items]) {
         self.items = items
     }
+}
+
+func ==(lhs: Product, rhs: Product) -> Bool {
+    guard lhs.items == rhs.items else { return false }
+    return true
 }
