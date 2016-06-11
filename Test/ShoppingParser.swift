@@ -25,10 +25,10 @@ class ShoppingParser{
         for (_, subJson):(String, JSON) in response {
             guard subJson.dictionary != nil else { continue }
             
-            guard let prodName = subJson["name1"].string, _ = subJson["colorDescription"].string, prodPrice = subJson["prices"]["list"].string, prodThumbimage = subJson["images"][1]["thumb"].string, _ = subJson["images"][0]["full"].string else {return ParserResult.failure((TestError.init("Error"))) }
+            guard let prodName = subJson["name1"].string, prodColor = subJson["colorDescription"].string, prodPrice = subJson["prices"]["list"].string, prodThumbimage = subJson["images"][1]["thumb"].string, _ = subJson["images"][0]["full"].string else {return ParserResult.failure((TestError.init("Error"))) }
             
             guard let productImage: UIImage? = stringToImage(prodThumbimage) else { return ParserResult.failure((TestError.init("Error")))  }
-            product.items.append(Items(productName: prodName, productPrice: prodPrice, productImage: productImage!))
+            product.items.append(Items(productName: prodName, productPrice: prodPrice, productImage: productImage!, prodColor: prodColor))
         }
         return ParserResult.success(product)
     }

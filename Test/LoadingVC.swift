@@ -20,7 +20,7 @@ class LoadingVC: UIViewController {
     var readyToGoFuture: Future<FutureResult>!
     
     override func viewDidLoad() {
-    
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,14 +33,8 @@ class LoadingVC: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         shoppingService.updateList().then { result in
-            guard let future = self.readyToGoFuture else { return }
-            
-            if future.value == nil {
-                self.waitForMenuPromise(future)
-                self.performSegueWithIdentifier("showMain", sender: future)
-                self.viewWillDisappear(false)
-            } else {
-                self.handleResult(future.value as FutureResult!)
+            self.mainThreadExecuter.execute() {
+                self.performSegueWithIdentifier("showMain", sender: self.product)
             }
         }
     }
@@ -61,37 +55,6 @@ class LoadingVC: UIViewController {
             }
             viewWillDisappear(false)
             mainVC.product = nxt
-            
-        }
-        
-    }
-    
-    private func waitForMenuPromise(menuFuture: Future<FutureResult>) {
-        self.mainThreadExecuter.startSpinner(self)
-        menuFuture.then { result in
-            self.mainThreadExecuter.execute {
-                self.handleResult(result)
-                self.mainThreadExecuter.stopSpinner(self)
-            }
         }
     }
-    
-    private func handleResult(result: FutureResult) {
-        switch result {
-        case .success: break
-        case .failure:
-            let alertView = UIAlertController(title: nil, message: "Error connecting to menu.", preferredStyle: .Alert)
-            alertView.addAction(UIAlertAction(title: "CANCEL", style: .Default) { _ in
-                self.navigationController?.performSegueWithIdentifier("showWelcome", sender: nil)
-                })
-            alertView.addAction(UIAlertAction(title: "RETRY", style: .Default) { _ in
-//                self.waitForMenuPromise(self.menuBroker.getMenuAndStore())
-                })
-            self.presentViewController(alertView, animated: true, completion: nil)
-        }
-        
-        self.readyToGoFuture = nil
-    }
-
-    
 }

@@ -12,16 +12,18 @@ class Items: Equatable {
     var productName: String
     var productPrice: String
     var productImage: UIImage
+    var prodColor: String
     
-    init(productName: String, productPrice: String, productImage: UIImage) {
+    init(productName: String, productPrice: String, productImage: UIImage, prodColor: String) {
         self.productName = productName
         self.productPrice = productPrice
         self.productImage = productImage
+        self.prodColor = prodColor
     }
 }
 
 func ==(lhs: Items, rhs: Items) -> Bool {
-    guard lhs.productName == rhs.productName && lhs.productPrice == rhs.productPrice && lhs.productImage == rhs.productImage else { return false
+    guard lhs.productName == rhs.productName && lhs.productPrice == rhs.productPrice && lhs.productImage == rhs.productImage && lhs.prodColor == rhs.prodColor else { return false
     }
     return true
 }

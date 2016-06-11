@@ -18,11 +18,17 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        let titleLabel = UILabel()
+        let colour = UIColor.redColor()
+        let attributes: [String : AnyObject] = [NSFontAttributeName: UIFont.boldSystemFontOfSize(28.0), NSForegroundColorAttributeName: colour, NSKernAttributeName : 5.0]
+        titleLabel.attributedText = NSAttributedString(string: "HOME", attributes: attributes)
+        titleLabel.sizeToFit()
+        self.navigationItem.titleView = titleLabel
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        //self.networkingArray = shopping.networkingArray
+        self.navigationItem.setHidesBackButton(true, animated: false)
         tableView.reloadData()
     }
     
@@ -32,10 +38,8 @@ class MainVC: UIViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCellIdentifier",forIndexPath: indexPath) as? ProductTableViewCell
-        
-//        let row = product.items[indexPath.row].productImage
-//
-        cell!.configure(product.items[indexPath.row].productImage)
+
+        cell!.configure(product.items[indexPath.row])
         return cell!
     }
 }
