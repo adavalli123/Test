@@ -12,12 +12,14 @@ class Items: Equatable {
     var productName: String
     var productPrice: String
     var productImage: UIImage
+    var prodFullImage: UIImage
     var prodColor: String
     
-    init(productName: String, productPrice: String, productImage: UIImage, prodColor: String) {
+    init(productName: String, productPrice: String, productImage: UIImage, prodFullImage: UIImage, prodColor: String) {
         self.productName = productName
         self.productPrice = productPrice
         self.productImage = productImage
+        self.prodFullImage = prodFullImage
         self.prodColor = prodColor
     }
 }

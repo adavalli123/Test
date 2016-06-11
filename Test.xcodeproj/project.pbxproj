@@ -33,6 +33,7 @@
 		DD3B60481D0343480062BB8D /* ParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B60471D0343480062BB8D /* ParserResult.swift */; };
 		DD3B604A1D03573B0062BB8D /* ShoppingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B60491D03573B0062BB8D /* ShoppingParser.swift */; };
 		DD3B604C1D03DA040062BB8D /* FutureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B604B1D03DA040062BB8D /* FutureResult.swift */; };
+		DD3B604E1D0CA24E0062BB8D /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B604D1D0CA24E0062BB8D /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		DD3B60471D0343480062BB8D /* ParserResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserResult.swift; sourceTree = "<group>"; };
 		DD3B60491D03573B0062BB8D /* ShoppingParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingParser.swift; sourceTree = "<group>"; };
 		DD3B604B1D03DA040062BB8D /* FutureResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureResult.swift; sourceTree = "<group>"; };
+		DD3B604D1D0CA24E0062BB8D /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			children = (
 				DD2AC6431CE9850B0021F241 /* LoadingVC.swift */,
 				DD2AC6461CE996D20021F241 /* MainVC.swift */,
+				DD3B604D1D0CA24E0062BB8D /* DetailVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				DD2AC64A1CE998290021F241 /* CellExtensions.swift in Sources */,
 				DD3B60481D0343480062BB8D /* ParserResult.swift in Sources */,
 				DD3B604A1D03573B0062BB8D /* ShoppingParser.swift in Sources */,
+				DD3B604E1D0CA24E0062BB8D /* DetailVC.swift in Sources */,
 				DD2AC6581CEADA930021F241 /* Product.swift in Sources */,
 				DD2AC64D1CE9A03D0021F241 /* ProductTableViewCell.swift in Sources */,
 				DD2AC6471CE996D20021F241 /* MainVC.swift in Sources */,

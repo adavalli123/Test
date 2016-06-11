@@ -53,7 +53,7 @@ class LoadingVC: UIViewController {
             guard let nxt  = sender as? Product else {
                 return print(NSError)
             }
-            viewWillDisappear(false)
+            viewWillDisappear(true)
             mainVC.product = nxt
         }
     }

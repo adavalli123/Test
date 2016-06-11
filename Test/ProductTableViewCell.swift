@@ -19,6 +19,6 @@ class ProductTableViewCell: UITableViewCell {
        self.productImage.image = items.productImage
         self.prodName.text = items.productName
         self.prodColor.text = items.prodColor
-        self.prodPrice.text = "   $\(items.productPrice)"
+        self.prodPrice.text = "$\(items.productPrice)"
     }
 }

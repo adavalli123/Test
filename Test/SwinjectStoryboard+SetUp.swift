@@ -20,6 +20,9 @@ extension SwinjectStoryboard {
             controller.product = resolver.resolve(Product.self)
         }
         
+        defaultContainer.registerForStoryboard(DetailVC.self) { resolver, controller in
+        }
+        
         // Services
         defaultContainer.register(ShoppingItemService.self) { resolver in
             ShoppingItemServiceImpl(
