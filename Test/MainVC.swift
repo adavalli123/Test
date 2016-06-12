@@ -28,11 +28,6 @@ class MainVC: UIViewController {
         tableView.reloadData()
     }
     
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        self.navigationItem.setHidesBackButton(false, animated: false)
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return product.items.count
     }
@@ -55,6 +50,7 @@ class MainVC: UIViewController {
             let detailVC = segue.destinationViewController as? DetailVC
             let nxt = sender as? Items
             detailVC?.item = nxt
+            
         default:
             break
         }

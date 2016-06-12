@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Nimble
+//import Nimble
 
 class Patron {
     let testCase: TestUITests

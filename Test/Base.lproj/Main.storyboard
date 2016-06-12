@@ -332,7 +332,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="DETAILS" id="gUX-AI-j7J"/>
+                    <navigationItem key="navigationItem" title="DETAILS" id="gUX-AI-j7J">
+                        <barButtonItem key="backBarButtonItem" title="  " id="6v4-v5-6d7"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="fullImage" destination="jkK-gg-e8C" id="MR1-Pr-8GW"/>
                         <outlet property="prodColor" destination="rTd-5v-OoF" id="Bi2-ru-XVr"/>
