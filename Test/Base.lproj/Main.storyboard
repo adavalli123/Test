@@ -107,6 +107,7 @@
                                                 <constraint firstItem="8GE-Cf-nwR" firstAttribute="leading" secondItem="bkY-my-QgT" secondAttribute="trailing" constant="8" id="zuv-WP-Sgz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="homePage"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="prodColor" destination="8GE-Cf-nwR" id="MAv-O5-XgQ"/>
@@ -154,8 +155,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkK-gg-e8C">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkK-gg-e8C">
                                 <rect key="frame" x="20" y="79" width="529" height="304"/>
+                                <accessibility key="accessibilityConfiguration" identifier="detail"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jkK-gg-e8C" secondAttribute="height" multiplier="100:69" id="zUF-hi-hke"/>
                                 </constraints>
@@ -306,10 +308,10 @@
                                 <exclude reference="67S-dF-V8E"/>
                                 <exclude reference="8Iq-gm-TGU"/>
                                 <exclude reference="Pqb-7I-q8e"/>
+                                <exclude reference="qoe-Ed-lVE"/>
                                 <exclude reference="Drw-KR-H79"/>
                                 <exclude reference="bCr-xt-P4o"/>
                                 <exclude reference="kgL-sE-kEB"/>
-                                <exclude reference="qoe-Ed-lVE"/>
                                 <exclude reference="9os-fh-I84"/>
                             </mask>
                         </variation>
@@ -322,10 +324,10 @@
                                 <include reference="67S-dF-V8E"/>
                                 <include reference="8Iq-gm-TGU"/>
                                 <include reference="Pqb-7I-q8e"/>
+                                <include reference="qoe-Ed-lVE"/>
                                 <include reference="Drw-KR-H79"/>
                                 <include reference="bCr-xt-P4o"/>
                                 <include reference="kgL-sE-kEB"/>
-                                <include reference="qoe-Ed-lVE"/>
                                 <include reference="9os-fh-I84"/>
                             </mask>
                         </variation>
